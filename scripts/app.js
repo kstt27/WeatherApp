@@ -78,12 +78,12 @@ cityForm.addEventListener('submit', e => {
 	.catch(err => console.log(err));
 
 
-	localStoreage.setItem('city', city);
+	localStorage.setItem('city', city);
 
 });
 
-if(localStoreage.getItem('city')){
-	updateCity(localStoreage.getItem('city'))
+if(localStorage.getItem('city')){
+	updateCity(localStorage.getItem('city'))
 	.then(data => updateUI(data))
 	.catch(err => console.log(err));
 }
@@ -106,12 +106,12 @@ if(localStoreage.getItem('city')){
 // 	.catch(err => console.log(err));
 
 
-// 	localStoreage.setItem('city', city);
+// 	localStorage.setItem('city', city);
 
 // });
 
-// if(localStoreage.getItem('city')){
-// 	forecast.updateCity(localStoreage.getItem('city'))
+// if(localStorage.getItem('city')){
+// 	forecast.updateCity(localStorage.getItem('city'))
 // 	.then(data => updateUI(data))
 // 	.catch(err => console.log(err));
 // }
